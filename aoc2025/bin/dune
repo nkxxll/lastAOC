@@ -1,0 +1,5 @@
+(executable
+ (public_name aoc2025)
+ (name main)
+ (libraries core core_unix.command_unix advent)
+ (preprocess (pps ppx_jane)))
