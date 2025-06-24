@@ -1,0 +1,20 @@
+(library
+  (name advent)
+  (libraries core str)
+  (modules advent))
+
+(library
+  (name day1)
+  (libraries core advent)
+  (modules day1))
+
+(library
+  (name day2)
+  (libraries core advent)
+  (preprocess (pps ppx_compare))
+  (modules day2))
+
+(library
+  (name day3)
+  (libraries core advent)
+  (modules day3))

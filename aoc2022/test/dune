@@ -1,0 +1,4 @@
+(test
+  (name test_aoc2022)
+  (libraries ppx_expect)
+  (preprocess (pps ppx_jane)))
