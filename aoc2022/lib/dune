@@ -28,3 +28,8 @@
   (name day5)
   (libraries core advent)
   (modules day5))
+
+(library
+  (name day6)
+  (libraries core advent)
+  (modules day6))
