@@ -13,6 +13,10 @@ val read_input_file : filename:string -> string
 Each line is stripped of leading/trailing whitespace. *)
 val read_input_file_lines : filename:string -> string list
 
+(** Read an input file and return its contents *n*ot *t*rimmed as a list of lines.
+Each line is *not* stripped of leading/trailing whitespace. *)
+val read_input_file_lines_nt : filename:string -> string list
+
 (** [do_on_list ~f ~init ~dirs] folds over a list of directions ([dirs]),
 applying function [f] to an accumulator [acc] and each direction.
 The initial accumulator value is [init]. *)
@@ -35,3 +39,5 @@ val sum : int list -> int
 (** [aass ~exp input ~msg] Runtime asserts that [exp] is true, otherwise raises [Failure msg]. *)
 val aass : exp:('a -> bool) -> ?msg:string -> 'a -> 'a
 
+(** print a char array (for day 5) *)
+val print_char_array : char array -> unit

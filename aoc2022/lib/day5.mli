@@ -1,2 +1,2 @@
-val task_one : int
-val task_two : int
+val task_one : char array
+val task_two : char array

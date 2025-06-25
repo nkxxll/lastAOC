@@ -20,6 +20,12 @@ let read_input_file_lines ~filename =
     In_channel.input_lines ic |> List.map ~f:String.strip)
 ;;
 
+(** Read an input file and return its contents as a list of lines. *)
+let read_input_file_lines_nt ~filename =
+  In_channel.with_file (input_file filename) ~f:(fun ic ->
+    In_channel.input_lines ic)
+;;
+
 (** Do something on something with a list of directions. *)
 let do_on_list ~f ~init ~dirs =
   List.fold dirs ~init ~f:(fun acc dir -> f acc dir)
@@ -44,3 +50,6 @@ let sum = List.fold_left ~init:0 ~f:( + )
 let aass ~exp ?(msg = "Assertion failed") input  =
   if not (exp input) then failwith msg else input
 ;;
+
+let print_char_array array =
+  Array.iter ~f:(fun c -> Printf.printf "%c" c) array; Printf.printf "\n"

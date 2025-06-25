@@ -47,7 +47,7 @@ let command =
          Advent.print_res Day3.task_one;
          Printf.printf "\n--- Day 3, Task 2 ---\n";
          Advent.print_res Day3.task_two
-       (* Day 3 *)
+       (* Day 4 *)
        | 4, Some 1 -> Advent.print_res Day4.task_one
        | 4, Some 2 -> Advent.print_res Day4.task_two
        | 4, None ->
@@ -55,6 +55,14 @@ let command =
          Advent.print_res Day4.task_one;
          Printf.printf "\n--- Day 4, Task 2 ---\n";
          Advent.print_res Day4.task_two
+       (* Day 5 *)
+       | 5, Some 1 -> Advent.print_char_array Day5.task_one
+       | 5, Some 2 -> Advent.print_char_array Day5.task_two
+       | 5, None ->
+         Printf.printf "\n--- Day 5, Task 1 ---\n";
+         Advent.print_char_array Day5.task_one;
+         Printf.printf "\n--- Day 5, Task 2 ---\n";
+         Advent.print_char_array Day5.task_two
        (* Handle unknown combinations *)
        | day, Some t -> printf "Unknown combination: day=%d task=%d\n" day t
        | day, None -> printf "Unknown day for all tasks: day=%d\n" day)
