@@ -24,13 +24,13 @@ let command =
             day);
        match day, task with
        (* Day 1 *)
-       | 1, Some 1 -> Advent.print_res Day1.task_one
-       | 1, Some 2 -> Advent.print_res Day1.task_two
+       | 1, Some 1 -> Advent.print_res (Day1.task_one ())
+       | 1, Some 2 -> Advent.print_res (Day1.task_two ())
        | 1, None ->
          Printf.printf "\n--- Day 1, Task 1 ---\n";
-         Advent.print_res Day1.task_one;
+         Advent.print_res (Day1.task_one ());
          Printf.printf "\n--- Day 1, Task 2 ---\n";
-         Advent.print_res Day1.task_two
+         Advent.print_res (Day1.task_two ())
        (* Day 2 *)
        | 2, Some 1 -> Advent.print_res Day2.task_one
        | 2, Some 2 -> Advent.print_res Day2.task_two
@@ -56,21 +56,30 @@ let command =
          Printf.printf "\n--- Day 4, Task 2 ---\n";
          Advent.print_res Day4.task_two
        (* Day 5 *)
-       | 5, Some 1 -> Advent.print_char_array Day5.task_one
-       | 5, Some 2 -> Advent.print_char_array Day5.task_two
+       | 5, Some 1 -> Advent.print_char_array (Day5.task_one ())
+       | 5, Some 2 -> Advent.print_char_array (Day5.task_two ())
        | 5, None ->
          Printf.printf "\n--- Day 5, Task 1 ---\n";
-         Advent.print_char_array Day5.task_one;
+         Advent.print_char_array (Day5.task_one ());
          Printf.printf "\n--- Day 5, Task 2 ---\n";
-         Advent.print_char_array Day5.task_two
+         Advent.print_char_array (Day5.task_two ())
        (* Day 6 *)
-       | 6, Some 1 -> Advent.print_res Day6.task_one
-       | 6, Some 2 -> Advent.print_res Day6.task_two
+       | 6, Some 1 -> Advent.print_res (Day6.task_one ())
+       | 6, Some 2 -> Advent.print_res (Day6.task_two ())
        | 6, None ->
          Printf.printf "\n--- Day 6, Task 1 ---\n";
-         Advent.print_res Day6.task_one;
+         Advent.print_res (Day6.task_one ());
          Printf.printf "\n--- Day 6, Task 2 ---\n";
-         Advent.print_res Day6.task_two
+         Advent.print_res (Day6.task_two ())
+       (* Handle unknown combinations *)
+       (* Day 8 *)
+       | 8, Some 1 -> Advent.print_res (Day8.task_one ())
+       | 8, Some 2 -> Advent.print_res (Day8.task_two ())
+       | 8, None ->
+         Printf.printf "\n--- Day 6, Task 1 ---\n";
+         Advent.print_res (Day8.task_one ());
+         Printf.printf "\n--- Day 6, Task 2 ---\n";
+         Advent.print_res (Day8.task_two ())
        (* Handle unknown combinations *)
        | day, Some t -> printf "Unknown combination: day=%d task=%d\n" day t
        | day, None -> printf "Unknown day for all tasks: day=%d\n" day)

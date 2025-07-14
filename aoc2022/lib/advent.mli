@@ -6,6 +6,8 @@ dependency of other libraries. It is not a part of the Advent of Code
 
 *)
 
+val directions : (int * int) array
+
 (** Read an input file and return its contents as a string. *)
 val read_input_file : filename:string -> string
 

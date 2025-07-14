@@ -41,5 +41,5 @@ let process_list_two list =
   loop 0 list
 ;;
 
-let task_one = String.to_list input |> process_list
-let task_two = String.to_list input |> process_list_two
+let task_one () = String.to_list input |> process_list
+let task_two () = String.to_list input |> process_list_two

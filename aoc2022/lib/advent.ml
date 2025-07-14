@@ -6,6 +6,7 @@
    *)
 open! Core
 
+let directions = [| 1, 0; -1, 0; 0, 1; 0, -1 |]
 let input_file file = "./inputs/" ^ file
 
 (** Read an input file and return its contents as a string. *)
@@ -47,9 +48,11 @@ let print_res res = Printf.printf "\tResult: %d\n" res
 let sum = List.fold_left ~init:0 ~f:( + )
 
 (** Runtime assert and expression and return the input afterwards *)
-let aass ~exp ?(msg = "Assertion failed") input  =
+let aass ~exp ?(msg = "Assertion failed") input =
   if not (exp input) then failwith msg else input
 ;;
 
 let print_char_array array =
-  Array.iter ~f:(fun c -> Printf.printf "%c" c) array; Printf.printf "\n"
+  Array.iter ~f:(fun c -> Printf.printf "%c" c) array;
+  Printf.printf "\n"
+;;

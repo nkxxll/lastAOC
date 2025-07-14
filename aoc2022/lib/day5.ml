@@ -77,5 +77,5 @@ let get_tops stacks =
   Array.map ~f:(fun stack -> Stack.top stack |> Option.value_exn)
 ;;
 
-let task_one = solve move_part_1 result |> get_tops
-let task_two = solve move_part_2 result |> get_tops
+let task_one () = solve move_part_1 result |> get_tops
+let task_two () = solve move_part_2 result |> get_tops

@@ -33,3 +33,8 @@
   (name day6)
   (libraries core advent)
   (modules day6))
+
+(library
+  (name day8)
+  (libraries core advent)
+  (modules day8))

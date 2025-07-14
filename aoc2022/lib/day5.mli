@@ -1,2 +1,2 @@
-val task_one : char array
-val task_two : char array
+val task_one : unit -> char array
+val task_two : unit -> char array

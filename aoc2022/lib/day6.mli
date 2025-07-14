@@ -1,2 +1,2 @@
-val task_one : int
-val task_two : int
+val task_one : unit -> int
+val task_two : unit -> int
