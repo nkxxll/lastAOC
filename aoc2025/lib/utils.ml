@@ -2,7 +2,7 @@
 
    It is not intended to be used directly by users, but rather as a
     dependency of other libraries. It is not a part of the Advent of Code
-    2025 challenge. Every day should have its own library. 
+    2025 challenge. Every day should have its own library.
    *)
 open Core
 

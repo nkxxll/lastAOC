@@ -1,4 +1,3 @@
 (library
   (name advent)
-  (libraries core))
-
+  (libraries core angstrom))
